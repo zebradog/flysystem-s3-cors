@@ -42,7 +42,7 @@ class S3FileItem extends \Drupal\file\Plugin\Field\FieldType\FileItem {
     // Cap the upload size according to the PHP limit.
     $max_filesize = Bytes::toInt('5G');
     if (!empty($settings['max_filesize'])) {
-      $max_filesize = min($max_filesize, Bytes::toInt($settings['max_filesize']));
+      //$max_filesize = min($max_filesize, Bytes::toInt($settings['max_filesize']));
     }
 
     // There is always a file size limit due to the PHP server limit.
